@@ -102,6 +102,6 @@ def read_numbers():
                 n_c = n_c * 10+i_c
         except EOFError:
             break
-    if flg_err is not True :
+    if flg_err is not True:
         return -1
     return n_c
