@@ -89,7 +89,7 @@ def read_numbers():
     while True:
         try:
             i_c = stdin.read(1)
-            if i_c is '':
+            if i_c == '':
                 break
             elif ord(i_c) is ord('\n'):
                 break
