@@ -89,7 +89,9 @@ def read_numbers():
     while True:
         try:
             i_c = stdin.read(1)
-            if ord(i_c) is ord('\n'):
+            if i_c is '':
+                break
+            elif ord(i_c) is ord('\n'):
                 break
             elif (ord(i_c) > ord('9')) | (ord(i_c) < ord('0')):
                 print('Not a number')
