@@ -42,36 +42,8 @@ class Net:
 
 def read_numb():
     """return list consists of lists"""
-    begin = number = time = 0
-    array = []
-    full_array = []
-    flg_err = True
-    while True:
-        try:
-            symb = stdin.read(1)
-            if symb == '':
-                break
-            elif ord(symb) == ord(' '):
-                begin = number
-                array.append(begin)
-                number = 0
-            elif ord(symb) == ord('\n'):
-                time = number
-                array.append(time)
-                number = 0
-                full_array.append(array.copy())
-                array.clear()
-            elif (ord(symb) > ord('9')) | (ord(symb) < ord('0')):
-                flg_err = False
-                break
-            else:
-                number = number*10+int(symb)
-        except EOFError:
-            break
-    if flg_err is False:
-        res_a = -1
-    else:
-        res_a = full_array
+    array = input()
+    res_a = eval(array)
     return res_a
 
 def main_f():
