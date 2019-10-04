@@ -55,7 +55,7 @@ def main_f():
     max_node = int(input('N:'))
     if max_node > 100:
         return
-    start_node = int(input('start node:'))
+    start_node = int(input('X:'))
     if start_node > max_node:
         print(-1)
         return
